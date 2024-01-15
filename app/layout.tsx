@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description: "NextCommerce is Shopping Application",
 };
 
+//
+export const revalidate = 20;
+
 export default function RootLayout({
   children,
 }: {
