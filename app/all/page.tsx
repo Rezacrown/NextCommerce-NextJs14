@@ -5,7 +5,6 @@ import { client } from "../lib/sanity";
 
 import { simplifiedProduct } from "@/app/types/index";
 
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 async function getData() {
