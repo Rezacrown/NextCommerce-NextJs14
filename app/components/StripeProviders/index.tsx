@@ -12,12 +12,10 @@ export default function StripeProviders({ children }: React.PropsWithChildren) {
       successUrl={process.env.NEXT_PUBLIC_STRIPE_URL_SUCCESS as string}
       // cancelUrl="https://commerce-next-yt.vercel.app/stripe/error"
       cancelUrl={process.env.NEXT_PUBLIC_STRIPE_URL_CANCEL as string}
-      currency="IDR"
-      //   currency="USD"
+      currency="USD"
       billingAddressCollection={false}
       shouldPersist={true}
-      language="id-ID"
-      //   language="en-US"
+      language="en-US"
     >
       {children}
     </CartProvider>
