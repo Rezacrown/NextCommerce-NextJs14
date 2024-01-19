@@ -29,7 +29,9 @@ export const dynamic = "force-dynamic";
 
 export default async function ProductPage({
   params,
-}: GetServerSidePropsContext) {
+}: {
+  params: { slug: string };
+}) {
   const data: fullProduct = await getData(params!.slug as string);
 
   return (
