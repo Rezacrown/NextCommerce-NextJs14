@@ -24,7 +24,9 @@ export const dynamic = "force-dynamic";
 
 export default async function CategoryPage({
   params,
-}: GetServerSidePropsContext) {
+}: {
+  params: { category: string };
+}) {
   const data: simplifiedProduct[] = await getData(params!.category as string);
 
   return (
