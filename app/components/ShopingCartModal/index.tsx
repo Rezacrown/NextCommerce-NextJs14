@@ -9,7 +9,6 @@ import {
 
 import Image from "next/image";
 import { useShoppingCart } from "use-shopping-cart";
-// import useShopingcart from "./useShopingcart";
 
 export default function ShoppingCartModal() {
   const {
@@ -20,15 +19,16 @@ export default function ShoppingCartModal() {
     removeItem,
     totalPrice,
     redirectToCheckout,
+    clearCart,
+    loadCart,
   } = useShoppingCart();
 
   async function handleCheckoutClick(event: any) {
     event.preventDefault();
     try {
-      const result = await redirectToCheckout();
-      if (result?.error) {
-        console.log("result");
-      }
+      await redirectToCheckout().then(() => {
+        clearCart();
+      });
     } catch (error) {
       console.log(error);
     }

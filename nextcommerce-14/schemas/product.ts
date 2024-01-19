@@ -61,6 +61,12 @@ export default defineType({
       // Label field
       title: 'Price',
     }),
+    // Field untuk menyimpan price_id untuk proses pemabyaran stripe
+    defineField({
+      name: 'price_id',
+      title: 'Stripe Price ID',
+      type: 'string',
+    }),
     // Field untuk menyimpan referensi ke kategori produk
     {
       // Nama field
